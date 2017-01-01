@@ -72,11 +72,7 @@ var isExperienced = []
 var isNotExperienced = []
 
 
-for player in players{
-    if ("Years of Experience" == true) {
-        players.
-    }
-}
+
 
 
 
