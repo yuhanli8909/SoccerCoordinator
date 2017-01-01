@@ -6,79 +6,61 @@ var str = "Hello, playground"
 
 //Yuhan's Comment
 
-var player = [
-    ["Name": "Joe Smith",
-     "Height": 42,
-     "Years of Experience": "YES",
-     "Guardian Name": "Jim and Jan Smith"],
-    ["Name": "Jill Tanner",
-     "Height":36,
-     "Years of Experience": "YES",
-     "Guardian Name":"Clara Tanner"],
-    ["Name": "Bill Bon",
-     "Height":43,
-     "Years of Experience": "YES",
-     "Guardian Name": "Sara and Jenny Bon"],
-    ["Name": "Eva Gordon",
-     "Height":45,
-     "Years of Experience": "NO",
-     "Guardian Name": "Wendy and Mike Gordon"],
-    ["Name": "Matt Gill",
-     "Height":40,
-     "Years of Experience": "NO",
-     "Guardian Name": "Charles and Sylvia Gill"],
-    ["Name": "Kimmy Stein",
-     "Height":41,
-     "Years of Experience": "NO",
-     "Guardian Name": "Bill and Hillary Stein"],
-    ["Name": "Sammy Adams",
-     "Height":45,
-     "Years of Experience": "NO",
-     "Guardian Name": "Jeff Adams"],
-    ["Name": "Karl Saygan",
-     "Height":42,
-     "Years of Experience": "YES",
-     "Guardian Name": "Heather Bledsoe"],
-    ["Name": "Susane Greenberg",
-     "Height": 44,
-     "Years of Experience": "YES",
-     "Guardian Name": "Henrietta Dumas"],
-    ["Name": "Sal Dali",
-     "Height":41,
-     "Years of Experience": "NO",
-     "Guardian Name": "Gala Dali"],
-    ["Name": "Joe Kavalier",
-     "Height":39,
-     "Years of Experience": "NO",
-     "Guardian Name": "Sam and Elaine Kavalier"],
-    ["Name": "Ben Finkelstein",
-     "Height":44,
-     "Years of Experience": "NO",
-     "Guardian Name": "Aeron and Jill Finkelstein"],
-    ["Name": "Diego Soto",
-     "Height":41,
-     "Years of Experience": "YES",
-     "Guardian Name": "Robin and Sarika Soto"],
-    ["Name": "Chloe Alaska",
-     "Height":47,
-     "Years of Experience":"NO",
-     "Guardian Name": "David and Jamie Alaska"],
-    ["Name": "Arnold Willis",
-     "Height":43,
-     "Years of Experience": "NO",
-     "Guardian Name": "Claire Willis"],
-    ["Name": "Philip Helm",
-     "Height":44,
-     "Years of Experience": "YES",
-     "Guardian Name": "Thomas Helm and Eva Jones"],
-    ["Name": "Les Clay",
-     "Height":42,
-     "Years of Experience":"YES",
-     "Guardian Name": "Wynonna Brown"],
-    ["Name": "Herschel Krustofski",
-     "Height":45,
-     "Years of Experience":"YES",
-     "Guardian Name": "Hyman and Rachel Krustofski"]
+let players = [
+    "Joe Smith":["Height": 42,
+                  "Years of Experience": true,
+                  "Guardian Name": "Jim and Jan Smith"],
+    "Jill Tanner":["Height":36,
+                   "Years of Experience": true,
+                   "Guardian Name":"Clara Tanner"],
+    "Bill Bon":["Height":43,
+                "Years of Experience": true,
+                "Guardian Name": "Sara and Jenny Bon"],
+    "Eva Gordon":["Height":45,
+                "Years of Experience": true,
+                "Guardian Name": "Wendy and Mike Gordon"],
+    "Matt Gill":["Height":40,
+                "Years of Experience": false,
+                "Guardian Name": "Charles and Sylvia Gill"],
+    "Kimmy Stein":["Height":41,
+                    "Years of Experience": false,
+                    "Guardian Name": "Bill and Hillary Stein"],
+    "Sammy Adams":["Height":45,
+                   "Years of Experience": false,
+                   "Guardian Name": "Jeff Adams"],
+    "Karl Saygan":["Height":42,
+                   "Years of Experience": true,
+                   "Guardian Name": "Heather Bledsoe"],
+    "Susane Greenberg":["Height": 44,
+                        "Years of Experience": true,
+                        "Guardian Name": "Henrietta Dumas"],
+    "Sal Dali":["Height":41,
+                "Years of Experience": false,
+                "Guardian Name": "Gala Dali"],
+    "Joe Kavalier":["Height":39,
+                    "Years of Experience": false,
+                    "Guardian Name": "Sam and Elaine Kavalier"],
+    "Ben Finkelstein":["Height":44,
+                      "Years of Experience": false,
+                      "Guardian Name": "Aeron and Jill Finkelstein"],
+    "Diego Soto":["Height":41,
+                  "Years of Experience": false,
+                  "Guardian Name": "Robin and Sarika Soto"],
+    "Chloe Alaska":["Height":47,
+                    "Years of Experience": false,
+                    "Guardian Name": "David and Jamie Alaska"],
+    "Arnold Willis":["Height":43,
+                    "Years of Experience": false,
+                    "Guardian Name": "Claire Willis"],
+    "Philip Helm":["Height":44,
+                    "Years of Experience": true,
+                    "Guardian Name": "Thomas Helm and Eva Jones"],
+    "Les Clay":["Height":42,
+                "Years of Experience": true,
+                "Guardian Name": "Wynonna Brown"],
+    "Herschel Krustofski":["Height":45,
+                            "Years of Experience": true,
+                            "Guardian Name": "Hyman and Rachel Krustofski"]
 ]
 
 
@@ -86,11 +68,15 @@ var teamSharks = []
 var teamDragons = []
 var teamRaptors = []
 
+var isExperienced = []
+var isNotExperienced = []
 
 
-
-
-
+for player in players{
+    if ("Years of Experience" == true) {
+        players.
+    }
+}
 
 
 
