@@ -141,15 +141,31 @@ for player in players {
 }
 */
 
+
 for player in players{
     for member in teamSharks{
         if (player["Name"] == member){
             func letters_teamSharks(member: String) -> String {
-                let letter = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamSharks, it is important that he or she attend the first team practice on March 17, 3pm."
-                return letter
+                let letter1 = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamSharks, it is important that he or she attend the first team practice on March 17, 3pm."
+                return letter1
+            }
+        }
+    }
+    for member in teamDragons{
+        if (player["Name"] == member){
+            func letters_teamDragons(member: String) -> String {
+                let letter2 = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamDragons, it is important that he or she attend the first team practice on March 17, 1pm."
+                return letter2
+            }
+        }
+    }
+    for member in teamRaptors{
+        if (player["Name"] == member){
+            func letters_teamRaptors(member: String) -> String {
+                let letter3 = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamRaptors, it is important that he or she attend the first team practice on March 18, 1pm."
+                return letter3
             }
         }
     }
 }
-
 
