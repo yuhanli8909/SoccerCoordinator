@@ -123,7 +123,6 @@ for index in 0..<3{
     teamRaptors.append(isNotExperienced[index])
 }
 
-
 //Dragons - March 17, 1pm
 //Sharks - March 17, 3pm
 //Raptors - March 18, 1pm
@@ -168,4 +167,5 @@ for player in players{
         }
     }
 }
+
 
