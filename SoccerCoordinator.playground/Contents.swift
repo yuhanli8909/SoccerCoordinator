@@ -98,29 +98,58 @@ for player in players {
     }
 }
 
-var randomNum = arc4random_uniform(8)
+
 
 for index in 0..<3{
+    var randomNum = arc4random_uniform(8)
     teamSharks.append(isExperienced[Int(randomNum)])
     isExperienced.removeAtIndex(Int(randomNum))
     teamSharks.append(isNotExperienced[Int(randomNum)])
     isNotExperienced.removeAtIndex(Int(randomNum))
 }
 
-var randomNum2 = arc4random_uniform(4)
 
 for index in 0..<3{
+    var randomNum2 = arc4random_uniform(5)
     teamDragons.append(isExperienced[Int(randomNum2)])
     isExperienced.removeAtIndex(Int(randomNum2))
     teamDragons.append(isNotExperienced[Int(randomNum2)])
     isNotExperienced.removeAtIndex(Int(randomNum2))
 }
 
+
 for index in 0..<3{
     teamRaptors.append(isExperienced[index])
     teamRaptors.append(isNotExperienced[index])
 }
 
-print(teamSharks)
-print(teamRaptors)
-print(teamDragons)
+
+//Dragons - March 17, 1pm
+//Sharks - March 17, 3pm
+//Raptors - March 18, 1pm
+
+
+//print the names of all guardians of teamSharks
+
+/*
+for player in players {
+    for member in teamSharks{
+        if (player["Name"] == member){
+            print(player["Guardian Name"])
+        }
+    }
+}
+*/
+
+for player in players{
+    for member in teamSharks{
+        if (player["Name"] == member){
+            func letters_teamSharks(member: String) -> String {
+                let letter = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamSharks, it is important that he or she attend the first team practice on March 17, 3pm."
+                return letter
+            }
+        }
+    }
+}
+
+
