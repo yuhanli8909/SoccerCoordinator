@@ -81,7 +81,7 @@ let players:[[String: String]] = [
         "Guardian Name": "Hyman and Rachel Krustofski"]
 ]
 
-
+//create three teams
 
 var teamSharks:[String?] = []
 var teamDragons:[String?] = []
@@ -89,6 +89,9 @@ var teamRaptors:[String?] = []
 
 var isExperienced:[String?] = []
 var isNotExperienced:[String?] = []
+
+
+//looping through all the players, send the players with experience to one array and the players without experience to another array
 
 for player in players {
     if (player["Experience"] == "true") {
@@ -99,9 +102,10 @@ for player in players {
 }
 
 
+//randomly sending equal number of players with experience to 3 teams, and randomly sending equal number of players without experience to 3 teams
 
 for index in 0..<3{
-    var randomNum = arc4random_uniform(8)
+    var randomNum = arc4random_uniform(8-UInt32(index))
     teamSharks.append(isExperienced[Int(randomNum)])
     isExperienced.removeAtIndex(Int(randomNum))
     teamSharks.append(isNotExperienced[Int(randomNum)])
@@ -110,7 +114,7 @@ for index in 0..<3{
 
 
 for index in 0..<3{
-    var randomNum2 = arc4random_uniform(5)
+    var randomNum2 = arc4random_uniform(5-UInt32(index))
     teamDragons.append(isExperienced[Int(randomNum2)])
     isExperienced.removeAtIndex(Int(randomNum2))
     teamDragons.append(isNotExperienced[Int(randomNum2)])
@@ -123,47 +127,39 @@ for index in 0..<3{
     teamRaptors.append(isNotExperienced[index])
 }
 
+
 //Dragons - March 17, 1pm
 //Sharks - March 17, 3pm
 //Raptors - March 18, 1pm
 
 
-//print the names of all guardians of teamSharks
+//print the letter to all guardians
 
-/*
-for player in players {
-    for member in teamSharks{
-        if (player["Name"] == member){
-            print(player["Guardian Name"])
-        }
-    }
+
+
+func letterContent(guardianName:String, childName:String, team:String, date:String) -> String {
+    return "Hello " + guardianName + ", I’m writing to congratulate you that your " + childName + " has been placed on " + team + "it is important that he or she attend the first team practice on " + date
 }
-*/
+
 
 
 for player in players{
     for member in teamSharks{
         if (player["Name"] == member){
-            func letters_teamSharks(member: String) -> String {
-                let letter1 = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamSharks, it is important that he or she attend the first team practice on March 17, 3pm."
-                return letter1
-            }
+            var letter1 = letterContent(player["Guardian Name"]!, childName: member!,team:"teamSharks", date: "March 17, 3pm.")
+            print (letter1 + "\n")
         }
     }
     for member in teamDragons{
         if (player["Name"] == member){
-            func letters_teamDragons(member: String) -> String {
-                let letter2 = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamDragons, it is important that he or she attend the first team practice on March 17, 1pm."
-                return letter2
-            }
+            var letter2 = letterContent(player["Guardian Name"]!, childName: member!, team:"teamDragons", date: "March 17, 1pm")
+            print (letter2 + "\n")
         }
     }
     for member in teamRaptors{
         if (player["Name"] == member){
-            func letters_teamRaptors(member: String) -> String {
-                let letter3 = "Hello \(player["Guardian Name"]), I’m writing to congratulate you that your child \(member) has been placed on teamRaptors, it is important that he or she attend the first team practice on March 18, 1pm."
-                return letter3
-            }
+            var letter3 = letterContent(player["Guardian Name"]!, childName: member!, team:"teamRaptors", date: "March 18, 1pm")
+            print (letter3 + "\n")
         }
     }
 }
